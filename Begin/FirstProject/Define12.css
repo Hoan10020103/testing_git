@@ -1,0 +1,143 @@
+
+/* .a,.b means define common properties for a and b  */
+/* .a.b only applied on element has both a and b class */
+/* .a .b apllied on element has class b contain in an element with class a */
+
+/* Rele if conflict happen 
+    Consider inheritance first: if a in b then apply a 
+    Consider type: id > class > type
+    There's still some rules but lazy :D
+*/
+.Class1{
+    width: 500px;
+    height: 500px;
+    border: 10px outset red;
+    background-color: aquamarine;
+    color: blue;
+    font-family:'Times New Roman', Times, serif;
+    size: 20px;
+    text-align: center;
+}
+
+#id1{
+    size: 50px;
+    color:black;
+    text-align: right;
+}
+
+.Class2{
+    list-style-type:lower-greek;
+    font-style: italic;
+}
+
+.Class3{
+    border: 10px outset violet;
+    background-color: wheat;
+    text-align: center;
+    size: 25px;
+}
+
+/* This is for Second.html */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    /* The text is hidden if past limit of the box */
+    /* alternate option for overflow: scroll, auto */
+    /* position sticky for scroll */
+    /* top so that it can stick to file */
+}
+  
+  /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        /* float so that padding can work */
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;    /* padding top,bottom 14px and right,left 16px  */
+        text-decoration: none;
+        font-size: 30px;
+    }
+    
+    /* Change the color of links on mouse hover */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+/* Test with box */
+.box-one, .box-two{
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+}
+
+.box-one{
+  background-color: aquamarine;
+  margin: 100px;
+  padding: 10px;
+  border: 30px solid purple;
+  box-sizing: border-box; 
+  /* border-box make height and weight include padding and border */
+  /* padding is the space between text and border */
+  /* border is the size of the border */
+  /* margin is space between border vs boder and it can be negative */
+}
+
+.box-two{
+  background-color: blue;
+  margin: 70px;
+  padding: 10px;
+  border: 20px solid aqua;
+  /* margin collapse against each other so in this case margin between 2 box will be 100px not 170px */
+  /* But above is applied only vertically, horizontally do + */
+}
+
+
+/* testing grid box */
+.grid-box{
+    height: 1000px;
+    background-color: black;
+    color:white;
+    display:grid;
+    padding: 100px;
+    grid-template-columns: 400px 1fr 1fr;
+    grid-auto-rows: minmax(50px, 100px);
+    gap: 50px;
+    /* justify content to adjust the x-axis  and align-content adujust the y-axis of contend in grid box */
+    /* but because here we use fraction to strech content so justify-content basically useless  */
+    justify-content: center;
+    align-content: center;
+
+}
+
+.grid-box div{
+    background-color: red;
+    border: 10px solid white;
+}
+
+.grid-box div:first-of-type{
+    grid-column: 1 / 3;
+}
+
+.grid-box div.grid-item-2{
+    grid-column: 1 / -1;
+}
+.grid-box div.grid-item-3{
+    grid-row: 3 / 5;
+}
+/* align-self and justify-self override align-items and justify-items in the parent */
+/* Those pairs use to adjust item position in the container */
+.grid-box div.grid-item-4{
+    grid-row: span 2;
+    align-self: start ;
+    justify-self: center;
+    border-radius: 10px;
+}
+

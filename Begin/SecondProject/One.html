@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One</title>
+</head>
+<body>
+    <!-- JavaScript in html -->
+    <script>
+    // number testing
+        console.log("Test with number --------");
+        console.log(9*4)
+        // Sometime decimal get messy so just * then /
+        let x = (0.2 * 10 + 0.1 * 10) / 10;
+        console.log(x);
+        let lotsOfDecimal = '1.7665849';
+        // addition append the string instead of add number
+        console.log(lotsOfDecimal + 2)
+        // the math is computed before meeting the string, after that it append into string 
+        console.log(4 + 4 + lotsOfDecimal);
+        // only + deal with string, other convert string to number
+        console.log("" - 2 + 5);
+        // +a convert a to number
+        let twoDecimalPlaces = +(+lotsOfDecimal).toFixed(2);
+        console.log(twoDecimalPlaces);
+        // = is treat as an operand so can be in a assignment
+        let a = 3;
+        let b = 2;
+        let c = 1 - (a = a - b);
+        console.log(a);
+        console.log(c);
+        // == may converse value to the same type
+        // === is strict comparision so it's won't converse into another data type
+        console.log("4" == 4);
+        console.log("4" === 4);
+
+    //string testing
+        console.log("Test with string --------");
+        let str = "Apple, Banana, Kiwi";
+        // extract a part
+        let cut1 = str.slice(6, 13);
+        let cut2 = str.slice(-12); 
+        let cut3 = str.substr(6, 7);
+        let cut4 = str.charAt(4);   // return empty string is not found
+        let cut5 = str[4];          // return undefine is not found, read only so str[4] = 'a' does not work
+        let cut6 = "      a         ";
+        cut6 = cut6.trim();      // eliminate white space from both side but no inside
+        console.log(cut1, "||", cut2, "||", cut3, '\n', cut4, cut5, cut6, 'a' );
+        // replace
+        let rep1 = str.replace("Apple", "case-sensitive-first-search");
+        let rep2 = str.replace(/APPLE/i, "not-case-sensitive-first-search");  
+        let rep3 = str.replace(/Apple/g, "Global-replace");
+        console.log(rep1, '\n', rep2, '\n', rep3);
+        // upper and lower
+        let case1 = str.toLowerCase();
+        let case2 = str.toUpperCase();
+        console.log(case1, '\n', case2);
+        // search
+        let text = "The rain in SPAIN stays mainly in the plain";
+        let d = text.match(/ain/g);
+        let e = text.match(/ain/gi);
+        let f = text.search("ain");
+        let g = text.lastIndexOf("ain");
+        let h = text.includes("ain");
+        let i = text.startsWith("rain", 4);
+        console.log(d.length, "||", e.length, "||", f, "||", g, "||", h, "||", i);
+    </script>
+</body>
+</html>

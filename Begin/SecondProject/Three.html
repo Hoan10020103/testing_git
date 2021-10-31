@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three</title>
+</head>
+<body>
+   
+    <p id="demo"></p>
+    <p></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <!-- <p id="demo2"></p> -->
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+        // we can access or modify element by a[i] but can not modify the whole
+        fruits[2] = "Potato";
+        // fruits = ["old", "new"]; this doesn't work
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+          text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        // push and pop element in array, join elements in array
+        document.getElementById("demo").innerHTML = text;
+        const fruits2 = ["Banana", "Orange", "Apple"];
+        fruits2.push("Lemon");
+        document.getElementById("demo2").innerHTML = fruits2.join(", ");
+        fruits2.pop();
+        document.getElementById("demo3").innerHTML = fruits2.join(", ");
+        // shift and unshift do the same but at the begin of array
+        fruits2.shift();
+        document.getElementById("demo4").innerHTML = fruits2.join(", ");
+        fruits2.unshift("Apple");
+        document.getElementById("demo5").innerHTML = fruits2.join(", ");
+        // splice erase 0 elemnts after 2nd element(not included) and add following elements into the slice
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits3.splice(2, 0, "Lemon", "Kiwi");
+        document.getElementById("demo6").innerHTML = fruits3;
+        // concatenating string
+        const arr1 = ["Cecilie", "Lone"];
+        const arr2 = ["Emil", "Tobias", "Linus"];
+        const arr3 = ["Robin", "Morgan"];
+        const myChildren = arr1.concat(arr2, arr3);
+        document.getElementById("demo7").innerHTML = myChildren;
+        
+    </script>
+    
+        
+     
+</body>
+</html>

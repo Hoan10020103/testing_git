@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference</title>
+</head>
+<body>
+    <p>Hello world</p>
+    <form action="result.html" method="get">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="username">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            Gender
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+        </div>
+        <div>
+            <label for="EyeColor">Eye Color</label>
+            <select name="EyeColor" id="EyeColor">
+                <option value="Green">Green</option>
+                <option value="Red">Red</option>
+            </select>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="age" name="age" id="age" min="18" max="200">
+        </div>
+        <div>
+            <label for="birthday">Birthday</label>
+            <input type="date" name="Bdate" id="birthday" min="1900-12-30" value="2000-01-01">
+        </div>
+        <div>
+            <label for="Password">Password</label>
+            <input type="password" name="password" id="Password" required>
+        </div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

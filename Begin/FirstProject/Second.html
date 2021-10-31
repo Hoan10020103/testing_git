@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+    <link rel="stylesheet" href="Define12.css">
+</head>
+<body>
+    <!-- create a navigation bar -->
+    <div style="height:200vh;">
+        <div class="topnav">
+            <p style="text-align: right;float:right;background-color: white;">Just sitting in a corner</p>
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>    
+        </div>
+        <!-- position absolute need relative to position -->
+        <div style="background-color: blue; position: relative; height:120px;">
+            Parent
+            <div style="background-color: turquoise;position: absolute;top: 100px; right:0px;">One</div>
+            <div style="background-color: violet;position: fixed;  top: 150px;">Two</div>
+            <!-- fixed doesn't care about parent but position based on the html page -->
+            <div style="background-color: aqua">Three</div>
+        </div>
+    </div>
+    
+    <!-- Test with box -->
+    <!-- There's two main type of box: block and inline and tags are default to one of the two -->
+    <!-- An inline element cannot contain a block-level element! -->
+    <!-- An inline-block box will respect height and width while inline do not care -->
+    <p style="display: inline;">One</p>
+    <div class="box-one" style="display: inline;">One</div>
+    <div class="box-two">Two</div>
+
+    <!-- Flexbox is a relatively new way of manipulating elements in CSS -->
+    <!-- it has become the default way of positioning elements for many developers -->
+    <!-- display: flex for the container to contain item -->
+    <div style="display: flex;height: 120px; width: 100px;">
+        <!-- Those are items in the container -->
+        <!-- flex: flex-grow flex-shrink flex-basis -->
+        <!-- flex grow is for comparing size between items, items will grow if total size not fit container -->
+        <!-- flex shrink if the items total size is larger than container, the items will determine comparable size based on this -->
+        <!-- flex-basis is auto if we want to shrink based on one value -->
+        <!-- flex-basis is 0 if we want to shrink based on size of flex-grow -->
+        <!-- flex-shrink does not shrink based on flex-grow, value is 0 if we do not want to keep the original size -->
+        <div style="  background: peachpuff;border: 4px solid brown;height: 100px;width: 50px;flex: 1 1 auto;"></div>    
+        <div style="  background: peachpuff;border: 4px solid brown;height: 100px;width: 50px;flex: 1 1 auto;"></div>    
+        <div style="  background: peachpuff;border: 4px solid brown;height: 100px;width: 50px;flex: 2 1 auto;"></div>    
+    </div>
+    <!-- When using column use flex-basis: auto if we do not specify height for container -->
+    <!-- when using column display flex by 3 value, if not flex will assume flex-basis is 0 and collapse if container has no height -->
+    <div style="display: flex;flex-direction: column;">
+        <div style="  background: peachpuff;border: 4px solid brown;height: 100px;width: 50px;flex: 1 1 auto;"></div>
+        <div style="  background: peachpuff;border: 4px solid brown;height: 100px;width: 50px;flex: 1 1 auto;"></div>
+    </div>
+    <!-- flex-wrap: nowrap is default, using flex-wrap:wrap will make move items not fit into a new line -->
+    <!-- align items consider the cross axis while justify-content consider the main axis. Both align items -->
+    <!-- the main axis is row if flex-direction:row, otherwise is column -->
+    <!-- the cross axis is 90 degree with the main axis -->
+    <!-- align content is used when there're many rows of item. It align the row -->
+    <div style="height: 140px;padding: 16px;background: plum;border: 4px solid indigo;display: flex;align-items: center;justify-content: center; gap: 50px;">
+        <div style = "width: 60px;height: 60px;border: 4px solid darkslategray;background: skyblue;"></div>
+        <div style = "width: 60px;height: 60px;border: 4px solid darkslategray;background: skyblue;align-self: flex-start;"></div>
+        <div style = "width: 60px;height: 60px;border: 4px solid darkslategray;background: skyblue;align-self:flex-end;"></div>
+    </div>
+
+    <!-- Flex box is one dimensional so people came up with grid -->
+    <!-- grid can arrange box in 2 dimension -->
+    <div class="grid-box">
+        <div>Grid 1</div>
+        <div class="grid-item-2">Grid 2</div>
+        <div class="grid-item-3">Grid 3</div>
+        <div class="grid-item-4">Grid 4</div>
+        <div>Grid 5</div>
+        <div>Grid 6</div>
+        <div>Grid 7</div>
+        <div>Grid 8</div>
+        <div>Grid 9</div>
+        <div>Grid 10</div>
+    </div>
+
+</body>
+</html>

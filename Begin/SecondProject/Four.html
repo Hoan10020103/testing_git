@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four</title>
+</head>
+<body>
+    <script src="Four.js" defer></script>
+    <h1>
+      Testing
+    </h1>
+    <div id="container"></div>
+    <br></br>
+    <!-- for event testing -->
+    <button onclick="alert('Hello World')">Click Me</button>
+    <button id="btn2">Click Me</button>
+    <button id="btn3">Click Me</button>
+    <button id="btn4">Click Me</button>
+    <button id="btn5">Click Me</button>
+    <button id="btn6">Click Me</button>
+
+    <!-- test for foreach() -->
+    <p>Container2</p>
+    <div id="container2">
+        <button id="1">Click Me</button>
+        <button id="2">Click Me</button>
+        <button id="3">Click Me</button>
+    </div>
+
+    <!-- bubbling, capture and propagation -->
+    <div class = 'div1 tet'>
+        <div class="div2 tet">
+            <div class="div3 tet">
+            </div>
+        </div>
+    </div>
+    <style>
+        .div1, .div2, .div3{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 100px;
+            
+        }
+        .div1{
+            background-color: lightcoral;
+        }
+        .div2{
+            background-color: lightskyblue;
+        }
+        .div3{
+            background-color: red;
+        }
+    </style>
+
+    
+</body>
+</html>
